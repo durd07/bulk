@@ -8,20 +8,20 @@ def update(bin):
         print(command)
         os.system(command)
     copy2device(ip, bin, "/tmp")
-    run_cmd(ip, "/var/ftp/busybox sh /tmp/" + bin) 
-    run_cmd(ip, "sync") 
+    run_cmd("/var/ftp/busybox sh /tmp/" + bin) 
+    run_cmd("sync") 
 
-def run_cmd(ip, cmd):
+def run_cmd(cmd):
     command = "ssh bit1@" + ip + " \"" + cmd + "\""
     print(command)
     os.system(command)
 
-def copy2device(ip, from_path, to_path):
+def copy2device(from_path, to_path):
     command = "scp " + from_path + " bit1@" + ip + ":" + to_path
     print(command)
     os.system(command)
 
-def copyfromdevice(ip, from_path, to_path):
+def copyfromdevice(from_path, to_path):
     command = "scp " + "bit1@" + ip + ":" + from_path + " " + to_path
     print(command)
     os.system(command)
@@ -30,4 +30,4 @@ for item in range(211, 212):
     ip = "192.168.1." + str(item)
     print("============ " + ip + " ============")
     update("PARK_20160125174403_A1.bin")
-    run_cmd(ip, "/sbin/reboot -f &")
+    run_cmd("/sbin/reboot -f &")
