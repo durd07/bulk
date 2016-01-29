@@ -1,6 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import os
-import httplib
+import http.client
 
 def update(bin):
     if not os.path.exists(bin):
@@ -12,8 +12,8 @@ def update(bin):
     run_cmd("/var/ftp/busybox sh /tmp/" + bin) 
     run_cmd("sync") 
 
-def http(cmd):
-    conn = httplib.HTTPConnection(ip, 80)
+def httpget(cmd):
+    conn = http.client.HTTPConnection(ip, 80)
     conn.request("GET", "/index.htm")
     result = conn.getresponse()
     print(result.status, result.reason)
@@ -23,7 +23,7 @@ def http(cmd):
     conn.close()
 
 def httpcfg(cmd):
-    conn = httplib.HTTPConnection(ip, 80)
+    conn = http.client.HTTPConnection(ip, 80)
     conn.request("GET", "/vb.htm?" + cmd)
     result = conn.getresponse()
     print(result.status, result.reason)
@@ -47,7 +47,20 @@ def copyfromdevice(from_path, to_path):
     print(command)
     os.system(command)
 
-for item in range(212, 237):
+for item in range(211, 216):
+#for item in [112, 114, 116]:
     ip = "192.168.1." + str(item)
-    print("============ " + ip + " ============")
-    httpcfg("timefrequency=-1&datestampenable3=2&sntpip=202.112.7.13&ntpinterval=30")
+    print("\033[95m============ " + ip + " ============\033[0m")
+    try:
+        #httpcfg("timefrequency=-1&datestampenable3=2&sntpip=202.112.7.13&ntpinterval=30")
+        httpcfg("network_card_type=4")
+        #run_cmd(r"sed -i '1i\ETHTOOL_OPTS=\"speed 10 duplex half autoneg off\"' /mnt/nand/info.cfg")
+        #run_cmd("cat /mnt/nand/info.cfg | grep ETH | wc")
+        #copy2device("/home/durd/work/ipnc_rdk/target/filesys/opt/ipnc/vd", "/tmp/vd")
+        #run_cmd("cp /tmp/vd /opt/ipnc")
+        #run_cmd("sync ; /sbin/reboot -f &")
+        #update("PARK_20160128142135_A1.bin")
+        #run_cmd("/sbin/reboot -f &")
+    except Exception as e:
+        print("\033[91m" + ip + " !!!FAILED!!!" + "\033[0m", "\033[93m", e, "\033[0m")
+        continue
