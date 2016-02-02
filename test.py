@@ -4,8 +4,8 @@ import http.client
 
 def update(bin):
     if not os.path.exists(bin):
-        command = "scp " + "durd@192.168.1.164:/home/durd/dm8127/svn_jenkins/build_park_960p/" + bin + " ."
-        #command = "scp " + "durd@192.168.1.164:/home/durd/dm8127/svn_jenkins/build_vp_p/" + bin + " ."
+        #command = "scp " + "durd@192.168.1.164:/home/durd/dm8127/svn_jenkins/release/build_park_960p/" + bin + " ."
+        command = "cp /home/durd/work/build/" + bin + " ."
         print(command)
         os.system(command)
     copy2device(bin, "/tmp")
@@ -33,7 +33,7 @@ def httpcfg(cmd):
     conn.close()
 
 def run_cmd(cmd):
-    command = "ssh bit1@" + ip + " \"" + cmd + "\""
+    command = "ssh -oUserKnownHostsFile=/dev/null -oStrictHostKeyChecking=no bit1@" + ip + " \"" + cmd + "\""
     print(command)
     os.system(command)
 
@@ -47,20 +47,22 @@ def copyfromdevice(from_path, to_path):
     print(command)
     os.system(command)
 
-for item in range(211, 216):
+for item in range(231, 237):
 #for item in [112, 114, 116]:
     ip = "192.168.1." + str(item)
     print("\033[95m============ " + ip + " ============\033[0m")
     try:
         #httpcfg("timefrequency=-1&datestampenable3=2&sntpip=202.112.7.13&ntpinterval=30")
-        httpcfg("network_card_type=4")
+        #httpcfg("network_card_type=4")
         #run_cmd(r"sed -i '1i\ETHTOOL_OPTS=\"speed 10 duplex half autoneg off\"' /mnt/nand/info.cfg")
         #run_cmd("cat /mnt/nand/info.cfg | grep ETH | wc")
         #copy2device("/home/durd/work/ipnc_rdk/target/filesys/opt/ipnc/vd", "/tmp/vd")
         #run_cmd("cp /tmp/vd /opt/ipnc")
+        #run_cmd("killall -9 vd")
+        #run_cmd("tail -f /tmp/log/vd.log")
         #run_cmd("sync ; /sbin/reboot -f &")
-        #update("PARK_20160128142135_A1.bin")
-        #run_cmd("/sbin/reboot -f &")
+        update("PARK_20160202160506_A1.bin")
+        run_cmd("/sbin/reboot -f &")
     except Exception as e:
         print("\033[91m" + ip + " !!!FAILED!!!" + "\033[0m", "\033[93m", e, "\033[0m")
         continue
