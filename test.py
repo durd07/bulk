@@ -9,8 +9,8 @@ def update(bin):
         print(command)
         os.system(command)
     copy2device(bin, "/tmp")
-    run_cmd("/var/ftp/busybox sh /tmp/" + bin) 
-    run_cmd("sync") 
+    run_cmd("/var/ftp/busybox sh /tmp/" + bin)
+    run_cmd("sync")
 
 def httpget(cmd):
     conn = http.client.HTTPConnection(ip, 80)
@@ -48,35 +48,46 @@ def copyfromdevice(from_path, to_path):
     print(command)
     os.system(command)
 
-for item in range(101, 139):
-#for item in [112, 114, 116]:
+for item in range(211, 237):
+#for item in [224]:
+    #ip = "192.168.8.8"
     ip = "192.168.1." + str(item)
     print("\033[95m============ " + ip + " ============\033[0m")
     try:
-        httpcfg("timefrequency=-1&datestampenable3=2&sntpip=58.58.40.162")
-        httpcfg("pt_set_save=4,1,0,58.58.40.162,10000,20000,58.58.40.162,18901,3702")
+        #httpcfg("timefrequency=-1&datestampenable3=2&sntpip=202.112.7.13")
+        #httpcfg("pt_set_save=4,1,0,58.58.40.162,10000,20000,58.58.40.162,18901,3702")
         #httpcfg("network_card_type=4")
         #run_cmd(r"sed -i '1i\ETHTOOL_OPTS=\"speed 10 duplex half autoneg off\"' /mnt/nand/info.cfg")
-        #run_cmd("cat /mnt/nand/info.cfg | grep ETH | wc")
-        #copy2device("/home/durd/work/ipnc_rdk/target/filesys/opt/ipnc/vd", "/tmp/vd")
+        #run_cmd("cat /mnt/nand/platform_set.cfg")
         #copy2device("/home/durd/work/ipnc_rdk/ipnc_app/vd/build/vd", "/tmp/vd")
-        #run_cmd("mv /tmp/vd /opt/ipnc/")
+        #run_cmd("mv /tmp/vd /opt/ipnc/vd")
+        #copy2device("/home/durd/work/ipnc_rdk/target/filesys/opt/ipnc/firmware/ipnc_rdk_fw_m3vpss.xem3", "/tmp/ipnc_rdk_fw_m3vpss.xem3")
+        #copy2device("/home/durd/repo/bulk/preview.htm", "/var/www/preview.htm")
+        #run_cmd("mv /tmp/ipnc_rdk_fw_m3vpss.xem3 /opt/ipnc/firmware/ipnc_rdk_fw_m3vpss.xem3")
+        #copy2device("platform_set.cfg", "/mnt/nand")
+        #copy2device("/home/durd/test/package/lrzsz-0.12.20/src/rz", "/usr/bin")
+        #copy2device("/home/durd/test/package/lrzsz-0.12.20/src/sz", "/usr/bin")
+        #run_cmd("cat /var/version/version")
+        #run_cmd("rm -rf /home/records/*")
+        #run_cmd("sync && /sbin/reboot -f &")
+        #os.system("ping " + ip)
         #run_cmd("/opt/ipnc/pid_status  -q|awk \'NR>4&&(\$6>120||\$8>100) {print  \$4 \\\"\\t\\\" \$6 \\\"\\t\\\" \$8 \\\"\\t\\\" \$9 }\' ")
         #run_cmd("/opt/ipnc/pid_status  -q|awk \'{print  \$4 \\\"\\t\\\" \$6 \\\"\\t\\\" \$8 \\\"\\t\\\" \$9 }\' ")
         #run_cmd("uptime")
         #run_cmd("date")
         #run_cmd("killall -9 vd")
         #run_cmd("tail -f /tmp/log/vd.log")
-        #run_cmd("sync ; /sbin/reboot -f &")
-        #update("PARK_20160302161421_A1.bin")
-        #run_cmd("/sbin/reboot -f &")
+        #copy2device("platform_set.cfg", "/mnt/nand/platform_set.cfg")
+        #update("PARK_A04_01_20160413192728_A1.bin")
+        #run_cmd("rm -rf /home/records/*")
+        run_cmd("cat /var/version/version")
     except Exception as e:
         print("\033[91m" + ip + " !!!FAILED!!!" + "\033[0m", "\033[93m", e, "\033[0m")
         continue
 
 """
 Pre defined actions
-1.  set ntp server 
+1.  set ntp server
     httpcfg("timefrequency=-1&datestampenable3=2&sntpip=58.58.40.162")
 2.  set platform for zehin
     httpcfg("pt_set_save=4,1,0,58.58.40.162,10000,20000,58.58.40.162,18901,3702")
