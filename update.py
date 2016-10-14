@@ -1,4 +1,36 @@
 #!/usr/bin/python3
+
+####################################################
+# CONFIGURATION
+####################################################
+ip = '192.168.8.8'
+
+change_network = True
+new_ip = '192.168.8.8'
+new_netmask = '255.255.128.0'
+new_gateway = '192.168.1.1'
+new_dns1 = '192.168.1.1'
+new_dns2 = '114.114.114.114'
+
+firmware_update = True
+new_firmware_version = 'PARK_A04_01_20161012A1_full.bin'
+
+update_time_config = True
+new_ntp_server = '202.112.7.13'
+new_ntp_interval = 3600
+new_ntp_type = 3
+
+enable_openvpn = True
+client_key_path = ''
+client_crt_path = ''
+
+provision_space_code = True
+new_space_code = '370212101001'
+
+reback_to_original_network = True
+
+
+
 import os
 import http.client
 import subprocess
