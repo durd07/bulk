@@ -66,7 +66,7 @@ def main():
                  + 'devCode=' + devCode + '&' \
                  + 'lastSpaceCode=' + lastSpaceCode + '&' \
                  + 'issave=' + issave + '&' \
-                 + 'parkCode=' + parkCode + '    \n'
+                 + 'parkCode=' + parkCode + '\n\n'
             print(body)
             #print(headers)
             url = 'htc.taizhou.gov.cn'

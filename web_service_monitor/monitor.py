@@ -7,7 +7,7 @@ import logging
 import logging.handlers
 
 MAX_FAILER = 2
-INTERVAL_TIME = 30
+INTERVAL_TIME = 300
 TIMEOUT = 4
 
 #ip_list = ["192.168.1.193"]
@@ -15,7 +15,7 @@ TIMEOUT = 4
 #java_home = "/usr/java/jdk1.7.0_67"
 #bin_path = "/home/durd/apache-tomcat-7.0.70/bin"
 
-ip_list = ["10.121.1.165", "10.121.1.166"]
+ip_list = ["htc.taizhou.gov.cn"]
 request_path = "/api/inspectorate/spaceManage.do?watchmanCode=f9554da6825c468caa0826b9215c0e43"
 java_home = "/root/jdk1.7"
 bin_path = "/root/apache-tomcat-7.0.70/bin"
@@ -81,17 +81,17 @@ def main():
             except Exception as e:
                 #print(e)
                 logger.error(item.ip + " !!!FAILED!!!" + e.__str__())
-                if type(e) is socket.timeout:
-                    item.rotate_count += 1
-                if item.rotate_count >= MAX_FAILER:
-                    item.rotate_count = 0
-                    logger.error(item.ip + " restart the service.")
-                    run_cmd(item.ip, shutdown_cmd)
-                    #run_cmd("192.168.1.153", shutdown_cmd)
+                #if type(e) is socket.timeout:
+                #    item.rotate_count += 1
+                #if item.rotate_count >= MAX_FAILER:
+                #    item.rotate_count = 0
+                #    logger.error(item.ip + " restart the service.")
+                #    run_cmd(item.ip, shutdown_cmd)
+                #    #run_cmd("192.168.1.153", shutdown_cmd)
 
-                    time.sleep(5)
-                    run_cmd(item.ip, startup_cmd)
-                    #run_cmd("192.168.1.153", startup_cmd)
+                #    time.sleep(5)
+                #    run_cmd(item.ip, startup_cmd)
+                #    #run_cmd("192.168.1.153", startup_cmd)
                 continue
         time.sleep(INTERVAL_TIME)
 
