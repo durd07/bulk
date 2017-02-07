@@ -1,0 +1,94 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 67 (0x43)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=CN, ST=SD, L=QD, O=BITCOM, OU=BITCOM, CN=openvpn/name=vpnserver/emailAddress=service@bitcomtech.com
+        Validity
+            Not Before: Nov 15 00:34:56 2016 GMT
+            Not After : Nov 13 00:34:56 2026 GMT
+        Subject: C=CN, ST=SD, L=QD, O=BITCOM, OU=BITCOM, CN=ipnc_zhengzhou_025/name=vpnserver/emailAddress=service@bitcomtech.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:b9:46:b9:2d:56:17:fc:df:ae:46:a4:19:ba:ff:
+                    95:b9:07:8b:66:a5:e2:28:36:78:57:3d:40:d2:9e:
+                    e4:ba:97:90:ff:32:02:cc:78:36:a6:c7:d0:51:d3:
+                    19:27:c2:40:b5:39:25:d6:1a:fd:d4:04:ac:f0:7e:
+                    c9:6c:bb:37:45:9e:cc:21:71:a0:4b:e9:da:fc:7e:
+                    b8:3f:fd:46:75:70:f1:7f:09:70:b2:cd:d2:b0:10:
+                    f7:f7:cd:d4:10:81:8d:01:e5:22:14:da:d9:d6:40:
+                    9b:14:c8:d1:fa:3b:50:ea:1c:4a:c7:0a:72:07:79:
+                    29:e9:22:dd:00:40:8f:5e:3d:8a:13:ee:c8:68:94:
+                    1f:db:6c:b9:30:dd:64:ef:62:46:fe:90:f8:68:af:
+                    09:ac:f5:b7:e2:af:9f:db:d5:80:4d:2b:f1:9b:6d:
+                    d2:a4:6b:dc:8b:42:b6:f5:8d:7a:64:f9:23:db:b1:
+                    45:25:ed:82:0e:38:49:f7:ac:24:75:79:31:ee:88:
+                    17:92:4a:68:1a:16:55:a4:80:77:71:02:cf:67:63:
+                    53:d6:b4:6f:da:b5:ec:1b:d2:af:ff:7b:6a:82:fe:
+                    77:8c:4c:a8:a3:3a:d2:1a:47:0f:60:93:5e:9c:84:
+                    3e:62:9c:80:f0:95:c9:1e:54:e0:76:3e:c8:b7:55:
+                    67:af
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                Easy-RSA Generated Certificate
+            X509v3 Subject Key Identifier: 
+                62:CF:7B:A1:FB:12:35:CF:5C:51:34:19:0A:99:D4:D7:36:38:32:21
+            X509v3 Authority Key Identifier: 
+                keyid:D0:9B:A8:C6:7F:41:28:36:BD:90:86:D6:ED:4E:81:2E:5A:5B:9F:09
+                DirName:/C=CN/ST=SD/L=QD/O=BITCOM/OU=BITCOM/CN=openvpn/name=vpnserver/emailAddress=service@bitcomtech.com
+                serial:D7:73:D9:E8:82:E2:9C:C8
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha256WithRSAEncryption
+         45:dc:bc:78:b3:16:f0:22:7c:b2:d4:6e:a2:95:c0:3c:fe:b6:
+         53:38:47:32:73:ee:0b:02:fc:06:8b:a8:f6:19:63:38:94:f1:
+         b5:55:2a:75:79:5b:b9:46:56:c9:fa:1f:fb:a5:58:c1:3e:18:
+         43:4d:d8:e9:66:cd:06:6e:48:f2:f1:de:77:ca:1a:eb:dc:40:
+         42:52:11:d2:e4:10:60:0e:ac:4a:cf:4b:50:a6:93:ee:7c:d4:
+         16:fd:ba:50:f1:a1:51:ba:b6:ed:56:09:a6:20:47:09:7c:7c:
+         77:ed:24:ac:05:74:a5:43:6d:d1:63:3e:b7:0e:f5:47:4b:57:
+         8d:fb:16:ce:ac:20:0e:a5:d3:41:5b:ca:75:5e:bb:4d:4f:e7:
+         3d:d9:8e:90:96:04:99:7a:3f:7e:b0:77:f2:50:fd:1a:90:74:
+         f1:4a:f3:ba:04:d5:71:0a:b9:c4:38:5a:b2:e3:85:42:b4:f7:
+         b3:67:95:6e:a7:17:88:4c:17:0d:b4:2a:b6:2a:77:93:cc:58:
+         1f:d2:6c:cf:19:98:23:92:6e:cc:fe:c8:49:1f:21:6a:08:0d:
+         c1:43:c0:72:4a:a7:4b:75:43:d0:e8:ca:98:e4:de:cd:8b:29:
+         dd:6e:67:b3:41:f8:bd:16:7a:79:a1:cb:f2:1f:50:99:b0:ae:
+         e9:a9:8f:08
+-----BEGIN CERTIFICATE-----
+MIIFAzCCA+ugAwIBAgIBQzANBgkqhkiG9w0BAQsFADCBljELMAkGA1UEBhMCQ04x
+CzAJBgNVBAgTAlNEMQswCQYDVQQHEwJRRDEPMA0GA1UEChMGQklUQ09NMQ8wDQYD
+VQQLEwZCSVRDT00xEDAOBgNVBAMTB29wZW52cG4xEjAQBgNVBCkTCXZwbnNlcnZl
+cjElMCMGCSqGSIb3DQEJARYWc2VydmljZUBiaXRjb210ZWNoLmNvbTAeFw0xNjEx
+MTUwMDM0NTZaFw0yNjExMTMwMDM0NTZaMIGhMQswCQYDVQQGEwJDTjELMAkGA1UE
+CBMCU0QxCzAJBgNVBAcTAlFEMQ8wDQYDVQQKEwZCSVRDT00xDzANBgNVBAsTBkJJ
+VENPTTEbMBkGA1UEAxQSaXBuY196aGVuZ3pob3VfMDI1MRIwEAYDVQQpEwl2cG5z
+ZXJ2ZXIxJTAjBgkqhkiG9w0BCQEWFnNlcnZpY2VAYml0Y29tdGVjaC5jb20wggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC5RrktVhf8365GpBm6/5W5B4tm
+peIoNnhXPUDSnuS6l5D/MgLMeDamx9BR0xknwkC1OSXWGv3UBKzwfslsuzdFnswh
+caBL6dr8frg//UZ1cPF/CXCyzdKwEPf3zdQQgY0B5SIU2tnWQJsUyNH6O1DqHErH
+CnIHeSnpIt0AQI9ePYoT7sholB/bbLkw3WTvYkb+kPhorwms9bfir5/b1YBNK/Gb
+bdKka9yLQrb1jXpk+SPbsUUl7YIOOEn3rCR1eTHuiBeSSmgaFlWkgHdxAs9nY1PW
+tG/atewb0q//e2qC/neMTKijOtIaRw9gk16chD5inIDwlckeVOB2Psi3VWevAgMB
+AAGjggFNMIIBSTAJBgNVHRMEAjAAMC0GCWCGSAGG+EIBDQQgFh5FYXN5LVJTQSBH
+ZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFGLPe6H7EjXPXFE0GQqZ1Nc2
+ODIhMIHLBgNVHSMEgcMwgcCAFNCbqMZ/QSg2vZCG1u1OgS5aW58JoYGcpIGZMIGW
+MQswCQYDVQQGEwJDTjELMAkGA1UECBMCU0QxCzAJBgNVBAcTAlFEMQ8wDQYDVQQK
+EwZCSVRDT00xDzANBgNVBAsTBkJJVENPTTEQMA4GA1UEAxMHb3BlbnZwbjESMBAG
+A1UEKRMJdnBuc2VydmVyMSUwIwYJKoZIhvcNAQkBFhZzZXJ2aWNlQGJpdGNvbXRl
+Y2guY29tggkA13PZ6ILinMgwEwYDVR0lBAwwCgYIKwYBBQUHAwIwCwYDVR0PBAQD
+AgeAMA0GCSqGSIb3DQEBCwUAA4IBAQBF3Lx4sxbwInyy1G6ilcA8/rZTOEcyc+4L
+AvwGi6j2GWM4lPG1VSp1eVu5RlbJ+h/7pVjBPhhDTdjpZs0Gbkjy8d53yhrr3EBC
+UhHS5BBgDqxKz0tQppPufNQW/bpQ8aFRurbtVgmmIEcJfHx37SSsBXSlQ23RYz63
+DvVHS1eN+xbOrCAOpdNBW8p1XrtNT+c92Y6QlgSZej9+sHfyUP0akHTxSvO6BNVx
+CrnEOFqy44VCtPezZ5VupxeITBcNtCq2KneTzFgf0mzPGZgjkm7M/shJHyFqCA3B
+Q8BySqdLdUPQ6MqY5N7NiyndbmezQfi9Fnp5ocvyH1CZsK7pqY8I
+-----END CERTIFICATE-----

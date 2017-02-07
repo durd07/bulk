@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 
+'''
+send request to platform to add space
+Cookie shoud be changed when you want to start.
+'''
+
 import csv
 import http.client
 import logging
